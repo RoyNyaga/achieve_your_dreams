@@ -1,0 +1,25 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: nyaga
+  password: <%= ENV['achieve_your_dream_DATABASE_PASSWORD'] %>
+
+development:
+  <<: *default
+  database: achieve_your_dream_development
+
+
+test:
+  <<: *default
+  database: achieve_your_dream_test
+
+
+production:
+  <<: *default
+  database: achieve_your_dream_production
+  username: achieve_your_dream
+  password: <%= ENV['achieve_your_dream_DATABASE_PASSWORD'] %>
