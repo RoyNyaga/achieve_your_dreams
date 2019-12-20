@@ -62,3 +62,44 @@ Completed 200 OK in 9937ms (Views: 9929.7ms | ActiveRecord: 0.0ms)
 Completed 200 OK in 6724ms (Views: 6723.6ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5956390858116528060)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCampaigns (20191220111150)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (270.9ms)[0m  [1m[35mCREATE TABLE "campaigns" ("id" bigserial primary key, "title" character varying, "content" character varying, "start_date" date, "end_date" date, "photo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191220111150_create_campaigns.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191220111150"]]
+  ↳ bin/rails:9
+  [1m[35m (16.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5956390858116528060)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/admin" for ::1 at 2019-12-20 12:17:34 +0100
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nyaga/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by Admin::DashboardController#index as HTML
+  Rendering /home/nyaga/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activeadmin-2.6.0/app/views/active_admin/page/index.html.arb
+  Rendered /home/nyaga/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activeadmin-2.6.0/app/views/active_admin/page/index.html.arb (10565.1ms)
+Completed 200 OK in 10610ms (Views: 10603.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/campaigns" for ::1 at 2019-12-20 12:17:49 +0100
+Processing by Admin::CampaignsController#index as HTML
+  Rendering /home/nyaga/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activeadmin-2.6.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "campaigns" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /home/nyaga/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendered /home/nyaga/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activeadmin-2.6.0/app/views/active_admin/resource/index.html.arb (429.3ms)
+Completed 200 OK in 511ms (Views: 447.3ms | ActiveRecord: 8.6ms)
+
+
