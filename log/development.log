@@ -137,3 +137,117 @@ Processing by Admin::CampaignsController#index as HTML
 Completed 200 OK in 5883ms (Views: 5865.7ms | ActiveRecord: 6.3ms)
 
 
+Started GET "/admin" for ::1 at 2019-12-20 14:31:46 +0100
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nyaga/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by Admin::DashboardController#index as HTML
+  Rendering /home/nyaga/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activeadmin-2.6.0/app/views/active_admin/page/index.html.arb
+  Rendered /home/nyaga/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/activeadmin-2.6.0/app/views/active_admin/page/index.html.arb (848.8ms)
+Completed 200 OK in 925ms (Views: 894.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info" for ::1 at 2019-12-20 14:31:51 +0100
+Processing by Rails::InfoController#index as HTML
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2019-12-20 14:31:52 +0100
+Processing by Rails::InfoController#routes as HTML
+  Rendering /home/nyaga/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/railties-5.2.4.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /home/nyaga/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [46 times] (41.1ms)
+  Rendered /home/nyaga/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/actionpack-5.2.4.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (39.3ms)
+  Rendered /home/nyaga/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/railties-5.2.4.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (109.6ms)
+Completed 200 OK in 140ms (Views: 116.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-20 14:33:38 +0100
+Processing by CampaignsController#index as HTML
+  Rendering campaigns/index.html.erb within layouts/application
+  Rendered campaigns/index.html.erb within layouts/application (14.4ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    15:   </thead>
+    16: 
+    17:   <tbody>
+    18:     <% @campaigns.each do |campaign| %>
+    19:       <tr>
+    20:         <td><%= campaign.title %></td>
+    21:         <td><%= campaign.content %></td>
+  
+app/views/campaigns/index.html.erb:18:in `_app_views_campaigns_index_html_erb__4031094986155036923_46981750005080'
+Started GET "/" for ::1 at 2019-12-20 14:35:29 +0100
+Processing by CampaignsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant CampaignsController::Campaings):
+  
+app/controllers/campaigns_controller.rb:4:in `index'
+Started GET "/" for ::1 at 2019-12-20 14:36:01 +0100
+Processing by CampaignsController#index as HTML
+  Rendering campaigns/index.html.erb within layouts/application
+  [1m[36mCampaign Load (0.8ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/views/campaigns/index.html.erb:18
+  Rendered campaigns/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 362ms (Views: 357.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2019-12-20 15:30:04 +0100
+Processing by CampaignsController#index as HTML
+  Rendering campaigns/index.html.erb within layouts/application
+  [1m[36mCampaign Load (58.2ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/views/campaigns/index.html.erb:18
+  Rendered campaigns/index.html.erb within layouts/application (103.5ms)
+Completed 500 Internal Server Error in 4389ms (ActiveRecord: 58.2ms)
+
+
+  
+ActionView::Template::Error (Error: wrong number of arguments (4 for 3) for `rgb'
+        on line 19:14 of app/assets/stylesheets/_custom.scss
+        from line 3:9 of app/assets/stylesheets/application.scss
+>> 	background: rgb(0, 0, 0, 0.6)!important;
+
+   -------------^
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/_custom.scss:19
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__4087371232000174056_70125084543080'
+Started GET "/" for ::1 at 2019-12-20 15:30:43 +0100
+Processing by CampaignsController#index as HTML
+  Rendering campaigns/index.html.erb within layouts/application
+  [1m[36mCampaign Load (0.7ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  ↳ app/views/campaigns/index.html.erb:18
+  Rendered campaigns/index.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 288ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (Error: wrong number of arguments (4 for 3) for `rgb'
+        on line 19:14 of app/assets/stylesheets/_custom.scss
+        from line 3:9 of app/assets/stylesheets/application.scss
+>> 	background: rgb(0, 0, 0, 0.6)!important;
+
+   -------------^
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/_custom.scss:19
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__4087371232000174056_70125081767620'

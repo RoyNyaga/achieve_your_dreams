@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+	root 'campaigns#index'
   resources :messages
   resources :campaigns
   ActiveAdmin.routes(self)

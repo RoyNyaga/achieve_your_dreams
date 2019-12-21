@@ -1,5 +1,14 @@
 class CampaignsController < InheritedResources::Base
 
+	def index
+		@campaigns = Campaign.all
+
+	end
+
+	def show
+
+	end
+
   private
 
     def campaign_params

@@ -1,0 +1,69 @@
+body {
+	overflow-x: hidden; /*all the contents stays within the browser window and doesn't overflow outside of it*/
+	font-family: 'Lato', sans-serif;
+	color: #505962;
+}
+.offset:before {
+	display: block;
+	content: "";
+	height: 4rem;
+	margin-top: -3.5rem;
+}
+/*Navigation*/
+
+.navbar {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: .9rem;
+	letter-spacing: .1rem;
+	background: rgb(0, 0, 0, 0.6);
+}
+.navbar-brand img {
+	height: 2rem;
+}
+.navbar-nav li{
+	padding-right: .7rem;
+}
+.navbar .navbar-nav .nav-link {
+	color: white;
+	padding-top: .8rem;
+}
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+	color: #1ebba3;
+}
+
+/*Landing Page*/
+
+#landing-page {
+	background: image_url('photo-1522717425499-89d3198ccc74.jpeg')center/cover fixed no-repeat;
+
+}
+.caption {
+	width: 100%;
+	max-width: 100%;
+	position: absolute;
+	top: 40%;
+	z-index: 1; /* ensures the image is always ontop ot the backgraound*/
+	color: white;
+	text-transform: uppercase;
+}
+.caption h1 {
+	font-size: 3.8rem;
+	font-weight: 700rem;
+	letter-spacing: .3rem;
+	text-shadow: 1rem 1rem .8rem black; /*veritcal shadow, horizontal shadow and blur radian*/
+	padding-bottom: 1rem;
+}
+.caption h3 {
+	font-size: 2rem;
+	text-shadow: .1rem .1rem .5rem black;
+	padding-bottom: 1.6rem;
+	padding-bottom: 1rem;
+}
+.btn-lg {
+	border-width: medium;
+	border-radius: 0;
+	padding: .6rem 1.3rem;
+	font-size: 1.1rem;
+}
