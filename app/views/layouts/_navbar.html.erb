@@ -1,0 +1,23 @@
+<div class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" >
+			<h1><%= link_to "Logo image", root_path, class: "navbar-brand" %></h1>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+		  	<ul class="navbar-nav ml-auto">
+		  		<li class="nav-item">
+		  			<%= link_to "Home", root_path, class: "nav-link" %>
+		  		</li>
+		  		<li class="nav-item">
+		  			<%= link_to "Campaigns", campaigns_path, class: "nav-link" %>
+		  		</li>
+		  		<li class="nav-item">
+		  			<%= link_to "About us", aboutpage_path, class: "nav-link" %>
+		  		</li>
+		  		<li class="nav-item">
+		  			<%= link_to "Contact", new_message_path, class: "nav-link" %>
+		  		</li>
+		  	</ul>
+		  </div>
+		</div>

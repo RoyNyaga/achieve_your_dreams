@@ -1,0 +1,118 @@
+ <%= render "layouts/header" %>
+<div class="container mb-5">
+  <section id="mission-statement" class="offset">
+    <div class="container">
+        <div id="mission-group-icon-div" class="text-center mx-auto">
+            <div class="mission-bars mission-bar-space d-inline-block"></div>
+            <h6 class="pt-2">AYDF MISSION</h6>
+            <div class="mission-bars mission-bar-space d-inline-block"></div>
+        </div>
+        
+        <div id="our-mission-is">
+            <h4 class="p-4 text-center">Our mission is to eat peoples money in cameroon and to embezle public funds</h4>
+        </div>
+    </div>
+  </section>
+
+  <section id="campaign" class="py-5">
+    <h3 class="text-center">On going campaigns</h3>
+    <div class="row">
+      <% @campaigns.each do |campaign| %>
+      <div class="col-9 col-sm-6 col-lg-4 mx-auto my-4">
+        <div class="card">
+          <%= link_to image_tag(campaign.photo, class: "card-img-top", alt: "picture"), campaign %>
+          <div class="card-body">
+            <div class="card-title">
+              <h3 class="text-capitalize"><%= campaign.title %></h3>
+              <h6>from <%= campaign.end_date.to_date.to_formatted_s :long_ordinal %> to the <%= campaign.end_date.to_date.to_formatted_s :long_ordinal %></h6>
+            </div>
+            <h4 class="primary-color text-capitalize"><%= truncate(campaign.content, :length => 50) %></h4>
+          </div>
+          <div class="card-footer team-icons d-flex justify-content-between">
+            <a href=""><i class="fab fa-facebook fa-2x"></i></a>
+            <%= link_to "Read More", campaign, class: "see-more-link h4" %>
+            
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </section>
+
+  <section id="reviews" class="py-5">
+        <div id="slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+<!--               carousel item-->
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-10 mx-auto d-flex justify-content-between review-item py-3">
+<!--                               image-->
+                                <div class="align-self-center ml-3">
+                                    <%= image_tag("photo-1548438294-1ad5d5f4f063.jpeg", class: "rounded-circle review-img", atl: "missing pic") %>
+                                </div>
+<!--                                text-->
+                               <div class="review-text px-5">
+                                   <h3 class="text-capitalize mb-3 primary-color">keep dreaming</h3>
+                                   <div class="lead text-muted">lorem20 thid id hoe tlo kjfg jkjl; dfgj ;kjfg sdkfj</div>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+<!--                end of carousel item-->
+<!--              carousel item-->
+               <div class="carousel-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-10 mx-auto d-flex justify-content-between review-item py-3">
+<!--                               image-->
+                                <div class="align-self-center ml-3">
+                                  
+                                    <%= image_tag("photo-1543616991-75a2c125ff5b.jpeg", class: "rounded-circle review-img", atl: "missing pic") %>
+                                </div>
+<!--                                text-->
+                               <div class="review-text px-5">
+                                   <h3 class="text-capitalize mb-3 primary-color">keep dreaming</h3>
+                                   <div class="lead text-muted">lorem20 thid id hoe tlo kjfg jkjl; dfgj ;kjfg sdkfj</div>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!--                end of carousel item -->
+           <!--              carousel item-->
+               <div class="carousel-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-10 mx-auto d-flex justify-content-between review-item py-3">
+<!--                               image-->
+                                <div class="align-self-center ml-3">
+                                    
+                                    <%= image_tag("photo-1555580399-49e780f216b7.jpeg", class: "rounded-circle review-img", atl: "missing pic") %>
+                                </div>
+<!--                                text-->
+                               <div class="review-text px-5">
+                                   <h3 class="text-capitalize mb-3 primary-color">keep dreaming</h3>
+                                   <div class="lead text-muted">lorem20 thid id hoe tlo kjfg jkjl; dfgj ;kjfg sdkfj</div>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!--                end of carousel item -->
+            </div>
+<!--            carousel controls-->
+           <a href="#slider" class="carousel-control-prev" role="button" data-slide="prev">
+               <span class="carousel-control-prev-icon"></span>
+           </a>
+
+           <a href="#slider" class="carousel-control-next" role="button" data-slide="next">
+               <span class="carousel-control-next-icon"></span>
+           </a>
+        </div>
+    </section>
+</div>
+
+
+

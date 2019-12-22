@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-	root 'campaigns#index'
+  get 'static_pages/home', as: "homepage"
+  get 'static_pages/about', as: "aboutpage"
+	root 'static_pages#home'
   resources :messages
   resources :campaigns
   ActiveAdmin.routes(self)

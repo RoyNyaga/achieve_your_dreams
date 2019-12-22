@@ -1,5 +1,24 @@
-<h1>New Message</h1>
+<%= render "layouts/navbar" %>
+<div class="container-fluid" id="message-wrapper">
+	<div id="message-form-container" class="container text-white">
+		<div class="row">
+			<div class="container-fluid mt-3 text-center">
+      <% flash.each do |message_type, message| %>
+        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %> 
+      <% end %>
+</div>
+			<div id="form-column" class="col-md-5 mx-auto">
+				<h1 class="text-center pb-5">Leave Us A message</h1>
+				<%= simple_form_for(@message) do |f| %>
+					<%= f.error_notification %>
+					<%= f.input :name %>
+					<%= f.input :email %>
+					<%= f.input :phone_number %>
+					<%= f.input :message %>					
+					<%= f.button :submit, "message", id: "message-button" %>
+				<% end %> 
+			</div>
+		</div>
+	</div>
+</div>
 
-<%= render 'form', message: @message %>
-
-<%= link_to 'Back', messages_path %>

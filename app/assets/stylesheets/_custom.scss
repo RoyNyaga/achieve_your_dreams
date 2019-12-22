@@ -16,7 +16,7 @@ body {
 	font-weight: 700;
 	font-size: .9rem;
 	letter-spacing: .1rem;
-	background: rgb(0, 0, 0, 0.6);
+	background: rgba(0, 0, 0, 0.6)!important;
 }
 .navbar-brand img {
 	height: 2rem;
@@ -66,4 +66,86 @@ body {
 	border-radius: 0;
 	padding: .6rem 1.3rem;
 	font-size: 1.1rem;
+}
+
+.mission-bars {
+    padding: 2px;
+    background: red;
+    width: 150px;
+}
+
+/*####### end of mission statement #######*/
+
+/*#################### campaign ##############################*/
+
+.team-icons a {
+    color: #3b5998;
+    transition: all 1s ease-in-out;
+}
+
+.team-icons a:hover {
+    color: #242424;
+    transform: translateY(-5px);
+}
+
+/*#################### end of campaign##############################*/
+
+/*review section*/
+
+#reviews {
+    background: image_url('photo-1546945586-a086b36a264f.jpeg')center/cover fixed no-repeat;
+}
+
+.review-item {
+    background: rgba(225,225,225,0.7);
+    clip-path:polygon(5% 0,100% 0,90% 100%,0 100%);
+}
+
+.review-img{
+    width:100%;
+}
+
+#footer-container-fluid{
+	background: #15395f;
+	height: 200px;
+}
+
+#footer-div{
+	position: relative;
+	top: 50px;
+}
+
+#message-form-container {
+	position: relative;
+	top: 150px;
+}
+
+#message-wrapper {
+	height: 100vh;
+	background: image_url('photo-1546945586-a086b36a264f.jpeg')center/cover fixed no-repeat;
+}
+
+#form-column{
+	border: 2px solid white;
+	box-shadow: 5px 10px 10px black;
+	padding: 10px;
+}
+
+#message-button {
+	padding: 5px;
+	background: white;
+	color: #15395f;
+	border: 2px solid #15395f;
+	font-size: 1.2rem;
+	font-weith: 700;
+}
+
+#message-button:hover {
+	background: transparent;
+	color: white;
+	border: 2px solid white;
+}
+
+.campaign-show-paragraph{
+	line-height: 1.6;
 }
